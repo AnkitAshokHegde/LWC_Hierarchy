@@ -11,11 +11,8 @@ export default class Parent extends LightningElement {
         this.childTwo = "Not selected";
         this.childThree = "Not selected";
 
-        // this.template.querySelector('c-child-comp-one').childReset();
-        // this.template.querySelector('c-child-comp-two').childReset();
-        // this.template.querySelector('c-child-comp-three').childReset();
         const childrenList = this.template.querySelectorAll('c-child-comp');
-        childrenList.forEach(element => {
+        childrenList.forEach(function(element){
             element.childReset();
         });
     }
